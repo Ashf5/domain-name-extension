@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Link Domain Interceptor",
+  "version": "1.0",
+  "description": "Show domain before following links",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://outlook.live.com/*",
+    "https://mail.yahoo.com/*",
+    "https://mail.proton.me/*",
+    "https://mail.aol.com/*",
+    "https://mail.zoho.com/*",
+    "https://fastmail.com/*",
+    "https://mail.yandex.com/*",
+    "https://mail.gmx.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://outlook.live.com/*",
+        "https://mail.yahoo.com/*",
+        "https://mail.proton.me/*",
+        "https://mail.aol.com/*",
+        "https://mail.zoho.com/*",
+        "https://fastmail.com/*",
+        "https://mail.yandex.com/*",
+        "https://mail.gmx.com/*"
+      ],
+      "js": ["psl.min.js", "content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
