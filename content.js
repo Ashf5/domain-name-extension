@@ -1,6 +1,4 @@
 
-// todo, make sure popup is always on the page.
-
 document.body.addEventListener('click', handleLinkClick);
 
 
@@ -13,8 +11,6 @@ function handleLinkClick(e) {
 
     let link = target.href;
     if (!link) return;
-
-
 
 
     // send to make sure it's not just a redirect link.
